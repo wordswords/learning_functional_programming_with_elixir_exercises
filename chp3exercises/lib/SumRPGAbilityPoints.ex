@@ -2,7 +2,7 @@ defmodule SumRPGAbilityPoints do
     
     def sum_points(value) do
         if map_has_keys?(value, [:Strength, :Intelligence, :Dexterity, :Wisdom, :Constitution, :Charisma]) do
-            Enum.reduce(value, 0, fn {_, v}, acc -> acc + v end)
+           Enum.reduce(value, 0, fn {_, v}, acc -> acc + v end)
         else
            raise ArgumentError, "SumRPGAbilityPoints map must be properly constructed"
         end
